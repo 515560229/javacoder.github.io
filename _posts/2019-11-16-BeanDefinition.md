@@ -33,7 +33,7 @@ tags:
         }
         Printer.println(beanDefinitionMap);
 ```
-```json
+```java
 {
     "org.springframework.context.annotation.ScannedGenericBeanDefinition": {
         "abstract": false,
