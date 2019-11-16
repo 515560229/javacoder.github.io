@@ -23,8 +23,8 @@
 
 .image-cover-modal-content {
     display: block;
-    max-width: 95%;
-    max-height: 95%;
+    /*max-width: 95%;*/
+    /*max-height: 95%;*/
 }
 
 #image-cover-caption {
