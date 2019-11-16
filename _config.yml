@@ -64,7 +64,7 @@ gitalk:
   enable: true    #是否开启Gitalk评论
   clientID: 7f8028e4b44909dc0b3b                            #生成的clientID
   clientSecret: c13d2e619b2e7f0378e175a59bd0459555eb8de6    #生成的clientSecret
-  repo: https://github.com/515560229/javacoder.github.io    #仓库名称
+  repo: https://github.com/515560229/blog-comments    #仓库名称
   owner: 515560229    #github用户名
   admin: 515560229
   distractionFreeMode: true #是否启用类似FB的阴影遮罩
