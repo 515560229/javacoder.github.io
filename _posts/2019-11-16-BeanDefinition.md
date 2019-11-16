@@ -33,13 +33,15 @@ tags:
         }
         Printer.println(beanDefinitionMap);
 ```
+
+## 常见的BeanDefinition
 ```java
 {
     "org.springframework.context.annotation.ScannedGenericBeanDefinition": {
         "abstract": false,
         "autowireCandidate": true,
         "autowireMode": 0,
-        "beanClassName": "com.javaleague.examples.spring4.common.BeanD",
+        "beanClassName": "com.javaleague.examples.spring4.common.BeanD",//类名
         "constructorArgumentValues": {
             "argumentCount": 0,
             "empty": true,
@@ -72,7 +74,7 @@ tags:
         },
         "nonPublicAccessAllowed": true,
         "primary": false,
-        "propertyValues": {
+        "propertyValues": {//属性值里不包括注解@Autowire注入的属性beanB
             "converted": false,
             "empty": true,
             "propertyValueList": [],
@@ -106,7 +108,7 @@ tags:
         },
         "resourceDescription": "file [F:\\git\\spring4-exaples\\spring4\\target\\classes\\com\\javaleague\\examples\\spring4\\common\\BeanD.class]",
         "role": 0,
-        "scope": "singleton",
+        "scope": "singleton",//单例
         "singleton": true,
         "source": {
             "$ref": "$.org.springframework.context.annotation.ScannedGenericBeanDefinition.resource"
@@ -135,13 +137,13 @@ tags:
         },
         "nonPublicAccessAllowed": true,
         "primary": false,
-        "propertyValues": {
+        "propertyValues": {//属性值可以看到beanA的踪影
             "converted": false,
             "empty": false,
             "propertyValueList": [
                 {
                     "converted": false,
-                    "name": "beanA",
+                    "name": "beanA",//属性名
                     "optional": false,
                     "originalPropertyValue": {
                         "$ref": "@"
@@ -174,14 +176,14 @@ tags:
         "resourceDescription": "URL [file:/F:/git/spring4-exaples/spring4/target/classes/p02.xml]",
         "role": 0,
         "scope": "",
-        "singleton": true,
+        "singleton": true,//单例
         "synthetic": false
     },
     "org.springframework.beans.factory.annotation.AnnotatedGenericBeanDefinition": {
         "abstract": false,
         "autowireCandidate": true,
         "autowireMode": 0,
-        "beanClassName": "com.javaleague.examples.spring4.p02.P02Main",
+        "beanClassName": "com.javaleague.examples.spring4.p02.P02Main",//本身也是一个bean
         "constructorArgumentValues": {
             "argumentCount": 0,
             "empty": true,
@@ -226,9 +228,18 @@ tags:
         "qualifiers": [],
         "resolvedAutowireMode": 0,
         "role": 0,
-        "scope": "singleton",
+        "scope": "singleton",//单例
         "singleton": true,
         "synthetic": false
     }
 }
 ```
+
+### AnnotatedGenericBeanDefinition
+被注解的，AnnotationConfigApplicationContext 启动时注解的class会使用该类型描述。
+
+### GenericBeanDefinition
+一般的，可继承的。xml里注解的bean一般都是这种。
+
+### ScannedGenericBeanDefinition
+被扫描出来的bean定义。如：@Autowire
