@@ -37,6 +37,9 @@
     <input type="text" id="search-input" placeholder="search..." style="border:2px solid;border-radius:25px;padding-left:10px !important;" >
     <ul id="results-container" style="max-width:300px;"></ul>
 </div>
+
+<!-- script pointing to jekyll-search.js-->
+<script src="{{ site.baseurl }}/js/simple-jekyll-search.min.js"></script>
 <script>
     window.simpleJekyllSearch = new SimpleJekyllSearch({
         searchInput: document.getElementById('search-input'),
@@ -50,8 +53,6 @@
     })
 </script>
 
-<!-- script pointing to jekyll-search.js-->
-<script src="{{ site.baseurl }}/js/simple-jekyll-search.min.js"></script>
 <script>
     // Drop Bootstarp low-performance Navbar
     // Use customize navbar with high-quality material design animation
