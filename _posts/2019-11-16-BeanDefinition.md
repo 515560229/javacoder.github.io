@@ -17,7 +17,7 @@ tags:
 ## 概念
 他是对bean的定义或者说描述一个bean的数据，也可以称为bean的原数据。
 
-## 类图：
+## 类图
 ![BeanDefinition](/img/posts/BeanDefinition_class.png "类图")
 
 ## Api获取
