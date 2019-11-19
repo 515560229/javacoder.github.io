@@ -12,8 +12,8 @@ tags:
 ---
 
 # Dubbo学习<一> DUBBO SPI
-学习路线参考: 
-![学习路线](https://blog.csdn.net/zhonghuixiong/article/details/79351928)
+
+[学习路线](https://blog.csdn.net/zhonghuixiong/article/details/79351928)
 
 ## DUBBO SPI 及其API使用 
 - Service Provider Interface简写
