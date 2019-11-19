@@ -12,7 +12,8 @@ tags:
 ---
 
 # Dubbo学习<一> DUBBO SPI
-学习路线参考: https://blog.csdn.net/zhonghuixiong/article/details/79351928
+学习路线参考: 
+![学习路线](https://blog.csdn.net/zhonghuixiong/article/details/79351928)
 
 ## DUBBO SPI 及其API使用 
 - Service Provider Interface简写
@@ -20,7 +21,8 @@ tags:
 - JAVA SPI 使用
 1. 抽象接口；  
 1. 编写实现；  
-1. 配置实现/META-INF/services/接口名，内容为：实现类全路径
+1. 配置实现/META-INF/services/接口名，内容为：实现类全路径  
+
 ```java
 public interface Animal {
 
@@ -72,7 +74,7 @@ com.javaleague.dubbo.spi.javaspi.Cat@5451c3a8
 1. 抽象接口（需要注解@SPI。框架已定义@SPI）； 
 1. 编写实现；
 1. 配置实现/META-INF/dubbo/接口名，内容为：key=实现类全路径
-1. 指定运行时使用的Key
+1. 指定运行时使用的Key  
 ```java
 public class MyFilter implements Filter {
     @Override
@@ -106,6 +108,7 @@ consumerAccessLogFilter: com.javaleague.dubbo.spi.dubbospi.MyFilter@50de0926
 
 - DUBBO SPI 之默认实现  
 注解@SPI("defaultName")
+
 ```java
 @SPI("default")
 public interface IHello {
@@ -156,6 +159,7 @@ Second: com.javaleague.dubbo.spi.dubbospi.defaultdemo.HelloSecondImpl@9807454
 
 - DUBBO SPI 之动态实现<一>  
 @Adaptive + extensionLoader.getAdaptiveExtension()
+
 ```java
 @SPI("default")
 public interface IHello {
@@ -248,6 +252,7 @@ a.为什么AdaptiveExtensionFactory这个类是固定已知的？因为整个框
 
 - DUBBO SPI 之动态实现<二>  
 上述方法只返回一个SPI接口的实例，下面讲返回到多个SPI接口的实例。  
+
 ```java
 @SPI("default")
 public interface IHello {
